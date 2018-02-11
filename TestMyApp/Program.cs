@@ -8,7 +8,7 @@ namespace TestMyApp
     {
         static void Main(string[] args)
         {
-            var array = new[] { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 };
+	    var array = new[] {1,2,3,4,5,6,7,8,9,10,11,12,13};
             array.SkipFromEnd(3);
             var str = "ttttr  ";
             str = str.TrriimmmEnd();
@@ -27,7 +27,7 @@ namespace TestMyApp
             var tmp = source.Reverse().Skip(amountToSkip).Reverse();
             foreach (var item in tmp)
             {
-                Console.WriteLine(item);
+                Console.WriteLine($"{nameof(item)}: {item}");
             }
             return tmp;
 
@@ -39,20 +39,20 @@ namespace TestMyApp
             return str.TrimEnd(trimmedChars);
         }
 
-        public static bool IsPalindrom(this string sourceString)
+        public static bool IsPalindrom(this string srcStr)
         {
-            if (string.IsNullOrWhiteSpace(sourceString))
+            if (string.IsNullOrWhiteSpace(srcStr))
             {
-                throw new ArgumentException($"{ nameof(sourceString)} should not be null or empty. ");
+                throw new ArgumentException($"{ nameof(srcStr)} should not be null or empty. ");
             }
             int startIndex = 0;
-            int endIndex = sourceString.Length - 1;
+            int endIndex = srcStr.Length - 1;
             bool contTest = false;
 
             while (startIndex < endIndex)
             {
-                char startChar = Char.ToLower(sourceString[startIndex]);
-                char endChar = Char.ToLower(sourceString[endIndex]);
+                char startChar = Char.ToLower(srcStr[startIndex]);
+                char endChar = Char.ToLower(srcStr[endIndex]);
 
                 if (!Char.IsLetterOrDigit(startChar))
                 {
@@ -75,6 +75,11 @@ namespace TestMyApp
             if (!contTest)
                 return false;
             return true;
+        }
+
+        public static void Prrinttt(this string pr)
+        {
+            Console.WriteLine(pr);
         }
     }
 }
