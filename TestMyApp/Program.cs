@@ -68,5 +68,10 @@ namespace TestMyApp
                 return false;
             return true;
         }
+
+        public static void Prrinttt(this string pr)
+        {
+            Console.WriteLine(pr);
+        }
     }
 }
