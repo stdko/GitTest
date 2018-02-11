@@ -6,7 +6,11 @@ namespace TestMyApp
 {
     class Program
     {
-        static void Main(string[] args) { }
+        static void Main(string[] args) {
+            var array = new[] {1,2,3,4,5,6,7,8,9,10};
+            array.SkipFromEnd(3);
+
+        }
 
     }
 
@@ -17,7 +21,12 @@ namespace TestMyApp
             if (source == null)
                 throw new ArgumentNullException($"{nameof(source)} is null.");
 
-            return source.Reverse().Skip(amountToSkip).Reverse();
+            var tmp = source.Reverse().Skip(amountToSkip).Reverse();
+            foreach (var item in tmp)
+            {
+                Console.WriteLine(item);
+            }
+            return tmp;
 
         }
 
