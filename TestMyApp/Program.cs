@@ -77,9 +77,9 @@ namespace TestMyApp
             return true;
         }
 
-        public static void Prrinttt(this string pr)
+        public static void Prrinttt(this string prprpr)
         {
-            Console.WriteLine(pr);
+            Console.WriteLine(prprpr);
         }
     }
 }
