@@ -6,10 +6,13 @@ namespace TestMyApp
 {
     class Program
     {
-        static void Main(string[] args) {
-            var array = new[] {1,2,3,4,5,6,7,8,9,10};
+        static void Main(string[] args)
+        {
+            var array = new[] { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 };
             array.SkipFromEnd(3);
-
+            var str = "ttttr  ";
+            str = str.TrriimmmEnd();
+            "ttttr  ".TrriimmmEnd();
         }
 
     }
@@ -30,6 +33,11 @@ namespace TestMyApp
 
         }
 
+        public static string TrriimmmEnd(this string str)
+        {
+            var trimmedChars = new Char[] {' ',','};
+            return str.TrimEnd(trimmedChars);
+        }
 
         public static bool IsPalindrom(this string sourceString)
         {
